@@ -1,6 +1,7 @@
--- create tables
+--create sequence
 create sequence team_member_seq;
 
+-- create table
 create table team_member (
     id                             number default on null team_member_seq.NEXTVAL 
                                    constraint team_member_id_pk primary key,

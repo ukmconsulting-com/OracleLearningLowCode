@@ -1,0 +1,17 @@
+/* Quick SQL for table of team_member using below setting (line#6)
+will be generate sql in outputquicksql_part1.sql 
+*/
+
+/* 
+# settings = { PK: "SEQ", semantics: "CHAR", auditCols: true,language: "EN", APEX: true }
+*/
+
+--create table
+team member
+  username /nn /lower
+  full name
+  email /nn
+  phone_number
+  profile
+  photo file
+--end of creating table

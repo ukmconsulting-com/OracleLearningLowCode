@@ -1,0 +1,29 @@
+project
+  name /nn
+  project_lead /nn /references team_member
+  budget num
+  status vc30 /nn /check assigned, in-progress, completed
+  completed_date
+  description
+  milestone 
+    name /nn
+    due_date /nn
+    description
+  task 
+    name /nn
+    assignee /references team_member
+    milestone_id /references milestone
+    start_date /nn
+    end_date
+    cost num
+    description
+    is_complete_yn /check Y, N
+    to do
+      todo vc(255) /nn
+      assingee /references team_member
+      due_date
+      details
+    link 
+      url vc(255) /nn /lower
+      name
+      description

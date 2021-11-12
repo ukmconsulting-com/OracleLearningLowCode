@@ -1,3 +1,4 @@
+------------------------------------------
 DROP TABLE hol_dept CASCADE CONSTRAINT;
 DROP SEQUENCE   hol_dept_seq;
 DROP TABLE hol_emp CASCADE CONSTRAINT;
@@ -10,13 +11,16 @@ CREATE TABLE hol_dept (
     deptno  NUMBER(2) NOT NULL,
     dname   VARCHAR2(50),
     loc     VARCHAR2(50),
-    CONSTRAINT deptid_pk PRIMARY KEY (deptid),
-    CONSTRAINT deptno_uc UNIQUE (deptno)
+    CONSTRAINT deptid_pk PRIMARY KEY (deptid), --setting a primary key
+    CONSTRAINT deptno_uc UNIQUE (deptno)       --setting a unique key
 );
---end create table dept
+--end create table dept creation
 
+--create sequence for auto number
 CREATE SEQUENCE hol_dept_seq START WITH 1 NOCACHE ORDER;
+--end of sequence creation
 
+--create trigger for auto entry of deptid
 CREATE OR REPLACE TRIGGER  hol_dept_biu  
   BEFORE INSERT ON hol_dept            
   for each ROW
@@ -27,6 +31,7 @@ BEGIN
 END 
 hol_dept_biu;
 /
+--end of trigger creation
 
 CREATE TABLE hol_emp (
     empid     NUMBER ,
